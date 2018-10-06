@@ -6,11 +6,10 @@ using System.Threading.Tasks;
 
 namespace Repositorio.Dominio.Entidades
 {
-    public class Comunidad
+    class Palabra
     {
-        public int IdComunidad { get; private set; }
+        public int IdPalabra { get; private set; }
         public string Nombre { get; private set; }
-        public string Descripcion { get; private set; }
         public bool Estado { get; private set; }
     }
 }
