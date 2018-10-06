@@ -10,6 +10,14 @@ namespace Repositorio.Infraestructura.Datos.Mapeos
 {
     public class ComunidadMapeo : EntityTypeConfiguration<Comunidad>
     {
-
+        public ComunidadMapeo()
+        {
+            ToTable("tbl_Comunidades");
+            HasKey(p => p.IdComunidad);
+            Property(p => p.IdComunidad).HasColumnName("Id_Comunidad");
+            Property(p => p.Nombre).HasColumnName("Nombre").HasMaxLength(200);
+            Property(p => p.Descripcion).HasColumnName("Descripcion");
+            Property(p => p.Estado).HasColumnName("Estado");
+        }
     }
 }
