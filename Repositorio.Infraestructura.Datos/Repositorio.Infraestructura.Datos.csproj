@@ -49,7 +49,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Mapeos\AutorMapeo.cs" />
+    <Compile Include="Mapeos\ColeccionMapeo.cs" />
     <Compile Include="Mapeos\ComunidadMapeo.cs" />
+    <Compile Include="Mapeos\SubComunidadMapeo.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="RepositorioContexto.cs" />
     <Compile Include="Repositorio\Repositorio.cs" />

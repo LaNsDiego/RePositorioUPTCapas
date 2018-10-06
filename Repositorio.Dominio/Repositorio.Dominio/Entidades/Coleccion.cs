@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Repositorio.Dominio.Entidades
 {
-    class Coleccion
+    public class Coleccion
     {
         public int IdColeccion { get; private set; }
         public int IdSubComunidad { get; private set; }

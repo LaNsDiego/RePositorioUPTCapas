@@ -12,11 +12,11 @@ namespace Repositorio.Infraestructura.Datos.Mapeos
     {
         public AutorMapeo()
         {
-            ToTable("TBL_AUTOR");
+            ToTable("tbl_Autor");
             HasKey(p => p.IdAutor);
-            Property(p => p.IdAutor).HasColumnName("ID_AUTOR");
-            Property(p => p.NombreAutor).HasColumnName("NOMBRE_AUTOR").HasMaxLength(200);
-            Property(p => p.EstadoAutor).HasColumnName("ESTADO_AUTOR");
+            Property(p => p.IdAutor).HasColumnName("Id_Autor");
+            Property(p => p.Nombre).HasColumnName("Nombre").HasMaxLength(200);
+            Property(p => p.Estado).HasColumnName("Estado");
         }
     }
 }
