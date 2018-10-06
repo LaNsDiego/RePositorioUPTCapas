@@ -13,6 +13,10 @@ namespace Repositorio.Infraestructura.Datos.Mapeos
         public AutorMapeo()
         {
             ToTable("TBL_AUTOR");
+            HasKey(p => p.IdAutor);
+            Property(p => p.IdAutor).HasColumnName("ID_LIBRO");
+            Property(p => p.NombreAutor).HasColumnName("NOMBRE_AUTOR").HasMaxLength(200);
+            Property(p => p.EstadoAutor).HasColumnName("ESTADO_AUTOR");
         }
     }
 }

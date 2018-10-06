@@ -9,5 +9,7 @@ namespace Repositorio.Dominio.Entidades
     public class Autor
     {
         public int IdAutor { get; private set; }
+        public string NombreAutor { get; private set; }
+        public string EstadoAutor { get; private set; }
     }
 }
