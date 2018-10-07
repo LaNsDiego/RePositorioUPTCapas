@@ -14,6 +14,7 @@ namespace Repositorio.Infraestructura.Datos.Mapeos
         {
             ToTable("tbl_DetalleArticuloPalabra");
             HasKey(p => p.IdDetalleArticuloPalabra);
+            Property(p => p.IdDetalleArticuloPalabra).HasColumnName("Id_DetalleArticuloPalabra");
             Property(p => p.IdPalabra).HasColumnName("Id_Palabra");
             Property(p => p.IdArticulo).HasColumnName("Id_Articulo");
             HasRequired(m => m.Palabra).WithMany().HasForeignKey(f => f.IdPalabra);

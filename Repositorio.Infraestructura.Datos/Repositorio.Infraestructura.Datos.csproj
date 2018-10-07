@@ -48,6 +48,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Mapeos\ArticuloMapeo.cs" />
     <Compile Include="Mapeos\AutorMapeo.cs" />
     <Compile Include="Mapeos\ColeccionMapeo.cs" />
     <Compile Include="Mapeos\ComunidadMapeo.cs" />

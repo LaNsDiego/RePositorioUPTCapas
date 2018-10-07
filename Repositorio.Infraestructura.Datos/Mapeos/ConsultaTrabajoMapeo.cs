@@ -14,6 +14,7 @@ namespace Repositorio.Infraestructura.Datos.Mapeos
         {
             ToTable("tbl_ConsultaTrabajo");
             HasKey(p => p.IdConsultaTrabajo);
+            Property(p => p.IdConsultaTrabajo).HasColumnName("Id_ConsultaTrabajo");
             Property(p => p.IdUsuario).HasColumnName("Id_Usuario");
             Property(p => p.IdArticulo).HasColumnName("Id_Articulo");
             Property(p => p.Hora).HasColumnName("Hora");

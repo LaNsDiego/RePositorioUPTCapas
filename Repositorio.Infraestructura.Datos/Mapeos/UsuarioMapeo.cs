@@ -14,6 +14,7 @@ namespace Repositorio.Infraestructura.Datos.Mapeos
         {
             ToTable("tbl_Usuario");
             HasKey(p => p.IdUsuario);
+            Property(p => p.IdUsuario).HasColumnName("Id_Usuario");
             Property(p => p.DireccionIp).HasColumnName("Id_DireccionIp");
             Property(p => p.Pais).HasColumnName("Id_Pais");
         }
