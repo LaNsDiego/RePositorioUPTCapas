@@ -6,10 +6,10 @@ using System.Threading.Tasks;
 
 namespace Repositorio.Dominio.Entidades
 {
-    class Usuario
+    public class Usuario
     {
-        public int IdUsuario { get; set; }
-        public string DireccionIp { get; set; }
-        public string Pais { get; set; }
+        public int IdUsuario { get;; private set; }
+        public string DireccionIp { get;; private set; }
+        public string Pais { get;; private set; }
     }
 }

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Repositorio.Dominio.Entidades
 {
-    class DetalleArticuloPalabra
+    public class DetalleArticuloPalabra
     {
         public int IdDetalleArticuloPalabra { get; private set; }
         public int IdPalabra { get; private set; }
