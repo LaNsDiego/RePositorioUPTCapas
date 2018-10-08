@@ -49,6 +49,9 @@
     <Reference Include="System.Core" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="EditorialPruebasUnitariasDatos.cs" />
+    <Compile Include="UsuarioPruebasUnitariasDatos.cs" />
+    <Compile Include="AutorPruebasUnitariasDatos.cs" />
     <Compile Include="ComunidadPruebasUnitariasDatos.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
