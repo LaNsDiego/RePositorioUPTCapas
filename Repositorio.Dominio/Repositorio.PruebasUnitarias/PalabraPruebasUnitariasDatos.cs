@@ -6,7 +6,7 @@ using Repositorio.Infraestructura.Datos;
 namespace Repositorio.PruebasUnitarias
 {
     [TestClass]
-    public class PalabraPruebasUnitariasDatos
+    public class ArticuloPruebasUnitariasDatos
     {
         [TestMethod]
         public void CrearPalabraSatisfactoriamente()
