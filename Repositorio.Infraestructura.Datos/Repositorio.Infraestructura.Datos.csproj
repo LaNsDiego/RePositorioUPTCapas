@@ -60,12 +60,19 @@
     <Compile Include="Mapeos\PalabraMapeo.cs" />
     <Compile Include="Mapeos\SubComunidadMapeo.cs" />
     <Compile Include="Mapeos\UsuarioMapeo.cs" />
+    <Compile Include="Migrations\201810110114186_BDRepositorioUPT.cs" />
+    <Compile Include="Migrations\201810110114186_BDRepositorioUPT.Designer.cs">
+      <DependentUpon>201810110114186_BDRepositorioUPT.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="RepositorioContexto.cs" />
-    <Compile Include="Repositorio\Repositorio.cs" />
+    <Compile Include="Repositorios\Repositorios.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="App.config" />
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
@@ -73,6 +80,11 @@
       <Project>{3029988F-7D64-4A74-8DEB-A386A5D6DF66}</Project>
       <Name>Repositorio.Dominio</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\201810110114186_BDRepositorioUPT.resx">
+      <DependentUpon>201810110114186_BDRepositorioUPT.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

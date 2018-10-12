@@ -5,9 +5,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Repositorio.Infraestructura.Datos.Repositorio
+namespace Repositorio.Infraestructura.Datos.Repositorios
 {
-    public class Repositorio : IRepositorios
+    public class Repositorios : IRepositorios
     {
         readonly RepositorioContexto ioContexto;
 
