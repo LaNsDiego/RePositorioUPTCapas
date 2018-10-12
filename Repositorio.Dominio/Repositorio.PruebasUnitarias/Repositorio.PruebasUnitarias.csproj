@@ -49,6 +49,13 @@
     <Reference Include="System.Core" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DetalleArticuloPalabraPruebasUnitariasDatos.cs" />
+    <Compile Include="DetalleArticuloAutorPruebasUnitariasDatos.cs" />
+    <Compile Include="PalabraPruebasUnitariasDatos.cs" />
+    <Compile Include="FicheroPruebasUnitariasDatos.cs" />
+    <Compile Include="EditorialPruebasUnitariasDatos.cs" />
+    <Compile Include="UsuarioPruebasUnitariasDatos.cs" />
+    <Compile Include="AutorPruebasUnitariasDatos.cs" />
     <Compile Include="ComunidadPruebasUnitariasDatos.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
