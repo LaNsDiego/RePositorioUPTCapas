@@ -31,11 +31,6 @@ namespace Repositorio.PruebasUnitarias
         [TestMethod]
         public void CambiarNombreComunidad02Satisfactoriamente()
         {
-            var loRepositorio = new Repositorio();
-            var loComunidad = loRepositorio.Listar<Comunidad>().FirstOrDefault(p => p.Nombre == "PREGRADO");
-            loComunidad.CambiarNombre("POSTGRADO");
-            loRepositorio.GuardarCambios();
-            Assert.IsNotNull(loComunidad);
         }
     }
 }
