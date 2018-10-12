@@ -1,7 +1,5 @@
 ﻿using System;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
-using Repositorio.Dominio.Entidades;
-using Repositorio.Infraestructura.Datos;
 
 namespace Repositorio.PruebasUnitarias
 {

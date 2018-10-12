@@ -7,7 +7,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Repositorio.Dominio", "Repo
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Repositorio.Infraestructura.Datos", "..\Repositorio.Infraestructura.Datos\Repositorio.Infraestructura.Datos.csproj", "{CC924DEE-B7CB-4A43-AB05-4CF3DC404C47}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Repositorio.PruebasUnitarias", "Repositorio.PruebasUnitarias\Repositorio.PruebasUnitarias.csproj", "{CA9BC8C0-7A5D-4B49-B397-2EE0A53C8A04}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Repositorio.PruebasUnitarias", "..\Repositorio.PruebasUnitarias\Repositorio.PruebasUnitarias.csproj", "{01007778-177E-46E6-B9DA-704F518A08B6}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -23,10 +23,10 @@ Global
 		{CC924DEE-B7CB-4A43-AB05-4CF3DC404C47}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{CC924DEE-B7CB-4A43-AB05-4CF3DC404C47}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{CC924DEE-B7CB-4A43-AB05-4CF3DC404C47}.Release|Any CPU.Build.0 = Release|Any CPU
-		{CA9BC8C0-7A5D-4B49-B397-2EE0A53C8A04}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{CA9BC8C0-7A5D-4B49-B397-2EE0A53C8A04}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{CA9BC8C0-7A5D-4B49-B397-2EE0A53C8A04}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{CA9BC8C0-7A5D-4B49-B397-2EE0A53C8A04}.Release|Any CPU.Build.0 = Release|Any CPU
+		{01007778-177E-46E6-B9DA-704F518A08B6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{01007778-177E-46E6-B9DA-704F518A08B6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{01007778-177E-46E6-B9DA-704F518A08B6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{01007778-177E-46E6-B9DA-704F518A08B6}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

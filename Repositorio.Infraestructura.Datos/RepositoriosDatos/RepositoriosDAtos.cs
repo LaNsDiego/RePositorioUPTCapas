@@ -1,4 +1,4 @@
-﻿using Repositorio.Dominio.Repositorios;
+﻿using Repositorio.Dominio.InterfaceRepositorio;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -7,28 +7,33 @@ using System.Threading.Tasks;
 
 namespace Repositorio.Infraestructura.Datos.Repositorios
 {
-    public class Repositorios : IRepositorios
+    public class RepositoriosDatos : IRepositorios
     {
         readonly RepositorioContexto ioContexto;
 
+        public RepositoriosDatos()
+        {
+            this.ioContexto = new RepositorioContexto();
+        }
+
         public void Adicionar<T>(T aoEntidad) where T : class
         {
-            throw new NotImplementedException();
+            ioContexto.Set<T>().Add(aoEntidad);
         }
 
         public void GuardarCambios()
         {
-            throw new NotImplementedException();
+            ioContexto.SaveChanges();
         }
 
         public IQueryable Listar<T>(string asPropiedades = "") where T : class
         {
-            throw new NotImplementedException();
+            return ioContexto.Set<T>();
         }
 
-        public T ObtenerPorCodigo<T>(params object[] aoLlave) where T : class
+        public T ObtenerPorCodigo<T>(params object[] aoLlaves) where T : class
         {
-            throw new NotImplementedException();
+            return ioContexto.Set<T>().Find(aoLlaves);
         }
     }
 }

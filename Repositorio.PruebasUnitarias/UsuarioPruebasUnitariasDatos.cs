@@ -1,7 +1,7 @@
 ﻿using System;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Repositorio.Dominio.Entidades;
-using Repositorio.Infraestructura.Datos;
+using Repositorio.Infraestructura.Datos.Repositorios;
 
 namespace Repositorio.PruebasUnitarias
 {
@@ -11,6 +11,7 @@ namespace Repositorio.PruebasUnitarias
         [TestMethod]
         public void CrearUsuarioSatisfactoriamente()
         {
+            //var liUsuario1 = 
             var loUsuario = Usuario.Registrar("2018_001", "10.101.99.17", "Perú");
             var loRepositorio = new Repositorio();
             loRepositorio.Adicionar<Usuario>(loUsuario);
@@ -21,8 +22,8 @@ namespace Repositorio.PruebasUnitarias
         [TestMethod]
         public void CambiarDireccionIpUsuarioSatisfactoriamente()
         {
-            var loRepositorio = new Repositorio();
-            var loUsuario = loRepositorio.ObtenerPorId<Conunidad>(1);
+            var loRepositorio = new RepositoriosDatos();
+            var loUsuario = loRepositorio.ObtenerPorCodigo<Comunidad>(1);
             loUsuario.CambiarDireccionIp("209.165.201.30");
             loRepositorio.GuardarCambios();
             Assert.IsTrue(loUsuario.DireccionIp == "209.165.201.30");
@@ -31,7 +32,7 @@ namespace Repositorio.PruebasUnitarias
         [TestMethod]
         public void CambiarNombreAutor02Satisfactoriamente()
         {
-            var loRepositorio = new Repositorio();
+            var loRepositorio = new RepositoriosDatos();
             var loUsuario = loRepositorio.Listar<Usuario>().FirstOrDefault(p => p.DireccionIp == "10.101.99.17");
             loUsuario.CambiarNombre("192.30.99.103");
             loRepositorio.GuardarCambios();

@@ -9,7 +9,7 @@ using Repositorio.Infraestructura.Datos.Mapeos;
 
 namespace Repositorio.Infraestructura.Datos
 {
-    class RepositorioContexto : DbContext
+    public class RepositorioContexto : DbContext
     {
         public RepositorioContexto() : base("BDRepositorio")
         {

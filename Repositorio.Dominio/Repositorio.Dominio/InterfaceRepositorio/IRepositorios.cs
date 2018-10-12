@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Repositorio.Dominio.Repositorios
+namespace Repositorio.Dominio.InterfaceRepositorio
 {
     public interface IRepositorios
     {
