@@ -1,7 +1,7 @@
 ﻿using System;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Repositorio.Dominio.Entidades;
-using Repositorio.Infraestructura.Datos;
+using Repositorio.Infraestructura.Datos.Repositorios;
 
 namespace Repositorio.PruebasUnitarias
 {
@@ -11,9 +11,9 @@ namespace Repositorio.PruebasUnitarias
         [TestMethod]
         public void CrearConsultaSatisfactoriamente()
         {
-            var loConsulta = Consulta.Registrar("2018000001", "2018_001", "2018010001", "20:50", "08/10/2018");
-            var loRepositorio = new Repositorio();
-            loRepositorio.Adicionar<Consulta>(loConsulta);
+            var loConsulta = ConsultaTrabajo.Registrar("2018000001", "2018_001", "2018010001", "20:50", "08/10/2018");
+            var loRepositorio = new RepositoriosDatos();
+            loRepositorio.Adicionar<ConsultaTrabajo>(loConsulta);
             loRepositorio.GuardarCambios();
             Assert.IsNotNull(loConsulta);
             Assert.IsTrue(loConsulta.IdConsultaTrabajo == "2018000001");
@@ -21,18 +21,18 @@ namespace Repositorio.PruebasUnitarias
         [TestMethod]
         public void CambiarHoraConsultaSatisfactoriamente()
         {
-            var loRepositorio = new Repositorio();
-            var loConsulta = loRepositorio.ObtenerPorId<Consulta>(1);
-            loConsulta.CambiarHoraConsulta("21:00");
+            var loRepositorio = new RepositoriosDatos();
+            var loConsulta = loRepositorio.ObtenerPorCodigo<ConsultaTrabajo>(1);
+            loConsulta.CambiarHoraConsulta(21);
             loRepositorio.GuardarCambios();
-            Assert.IsTrue(loConsulta.Hora == "21:00");
+            Assert.IsTrue(loConsulta.Hora == 21);
         }
 
         [TestMethod]
         public void CambiarFechaConsultaSatisfactoriamente()
         {
-            var loRepositorio = new Repositorio();
-            var loConsulta = loRepositorio.Listar<Consulta>().FirstOrDefault(p => p.Fecha == "08/10/2018");
+            var loRepositorio = new RepositoriosDatos();
+            var loConsulta = loRepositorio.Listar<ConsultaTrabajo>().FirstOrDefault(p => p.Fecha == "08/10/2018");
             loConsulta.CambiarFechaConsulta("09/10/2018");
             loRepositorio.GuardarCambios();
             Assert.IsNotNull(loConsulta);

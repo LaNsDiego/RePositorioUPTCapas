@@ -1,7 +1,7 @@
 ﻿using System;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Repositorio.Dominio.Entidades;
-using Repositorio.Infraestructura.Datos;
+using Repositorio.Infraestructura.Datos.Repositorios;
 
 namespace Repositorio.PruebasUnitarias
 {
@@ -12,7 +12,7 @@ namespace Repositorio.PruebasUnitarias
         public void CrearDetalleArticuloPalabraSatisfactoriamente()
         {
             var loDetalleArticuloPalabra = DetalleArticuloPalabra.Registrar("2018_001", "2018_100", "2018_099", "Recursos Humanos", "Algoritmos genéticos");
-            var loRepositorio = new Repositorio();
+            var loRepositorio = new RepositoriosDatos();
             loRepositorio.Adicionar<DetalleArticuloPalabra>(loDetalleArticuloPalabra);
             loRepositorio.GuardarCambios();
             Assert.IsNotNull(loDetalleArticuloPalabra);
@@ -21,7 +21,7 @@ namespace Repositorio.PruebasUnitarias
         [TestMethod]
         public void CambiarIdPalabraDetalleArticuloPalabraSatisfactoriamente()
         {
-            var loRepositorio = new Repositorio();
+            var loRepositorio = new RepositoriosDatos();
             var loDetalleArticuloPalabra = loRepositorio.ObtenerPorId<DetalleArticuloPalabra>(1);
             loDetalleArticuloPalabra.CambiarIdPalabra("2018_200");
             loRepositorio.GuardarCambios();
@@ -31,7 +31,7 @@ namespace Repositorio.PruebasUnitarias
         [TestMethod]
         public void CambiarIdPalabraDetalleArticuloPalabra02Satisfactoriamente()
         {
-            var loRepositorio = new Repositorio();
+            var loRepositorio = new RepositoriosDatos();
             var loDetalleArticuloPalabra = loRepositorio.Listar<DetalleArticuloPalabra>().FirstOrDefault(p => p.IdPalabra == "2018_100");
             loDetalleArticuloPalabra.IdPalabra("2018_999");
             loRepositorio.GuardarCambios();

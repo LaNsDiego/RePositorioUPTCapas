@@ -1,5 +1,7 @@
 ﻿using System;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
+using Repositorio.Dominio.Entidades;
+using Repositorio.Infraestructura.Datos.Repositorios;
 
 namespace Repositorio.PruebasUnitarias
 {
@@ -10,7 +12,7 @@ namespace Repositorio.PruebasUnitarias
         public void CrearAutorSatisfactoriamente()
         {
             var loAutor = Autor.Registrar("2018_001", "Juan Rodrigo", "1");
-            var loRepositorio = new Repositorio();
+            var loRepositorio = new RepositoriosDatos();
             loRepositorio.Adicionar<Autor>(loAutor);
             loRepositorio.GuardarCambios();
             Assert.IsNotNull(loAutor);
@@ -19,8 +21,8 @@ namespace Repositorio.PruebasUnitarias
         [TestMethod]
         public void CambiarNombreAutorSatisfactoriamente()
         {
-            var loRepositorio = new Repositorio();
-            var loAutor = loRepositorio.ObtenerPorId<Conunidad>(1);
+            var loRepositorio = new RepositoriosDatos();
+            var loAutor = loRepositorio.ObtenerPorId<Comunidad>(1);
             loAutor.CambiarNombre("Jimena Carol");
             loRepositorio.GuardarCambios();
             Assert.IsTrue(loAutor.Nombre == "Jimena Carol");
@@ -29,7 +31,7 @@ namespace Repositorio.PruebasUnitarias
         [TestMethod]
         public void CambiarNombreAutor02Satisfactoriamente()
         {
-            var loRepositorio = new Repositorio();
+            var loRepositorio = new RepositoriosDatos();
             var loAutor = loRepositorio.Listar<Comunidad>().FirstOrDefault(p => p.Nombre == "Juan Rodrigo");
             loAutor.CambiarNombre("Manuel Diego");
             loRepositorio.GuardarCambios();

@@ -13,6 +13,7 @@ namespace Repositorio.Dominio.Entidades
         public string Titulo { get; private set; }
         public string Resumen { get; private set; }
         public string Contenido { get; private set; }
+
         public DateTime FechaPublicacion { get; private set; }
         public int IdDetalleArticuloAutor { get; private set; }
         public int IdDetalleArticuloPalabra { get; private set; }
@@ -26,5 +27,15 @@ namespace Repositorio.Dominio.Entidades
         public Coleccion Coleccion { get; private set; }
         public Editorial Editorial { get; private set; }
         public Fichero Fichero { get; private set; }
+
+
+        public void CambiarTitulo(string NuevoTitulo)
+        {
+            Titulo = NuevoTitulo;
+        }
+        public void Registrar()
+        {
+
+        }
     }
 }

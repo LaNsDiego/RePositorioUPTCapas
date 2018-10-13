@@ -67,7 +67,7 @@
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="RepositorioContexto.cs" />
-    <Compile Include="RepositoriosDatos\RepositoriosDatos.cs" />
+    <Compile Include="Repositorios\RepositoriosDatos.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config">

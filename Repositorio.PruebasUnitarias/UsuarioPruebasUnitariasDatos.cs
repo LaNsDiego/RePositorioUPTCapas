@@ -13,7 +13,7 @@ namespace Repositorio.PruebasUnitarias
         {
             //var liUsuario1 = 
             var loUsuario = Usuario.Registrar("2018_001", "10.101.99.17", "Perú");
-            var loRepositorio = new Repositorio();
+            var loRepositorio = new RepositoriosDatos();
             loRepositorio.Adicionar<Usuario>(loUsuario);
             loRepositorio.GuardarCambios();
             Assert.IsNotNull(loUsuario);
@@ -23,7 +23,7 @@ namespace Repositorio.PruebasUnitarias
         public void CambiarDireccionIpUsuarioSatisfactoriamente()
         {
             var loRepositorio = new RepositoriosDatos();
-            var loUsuario = loRepositorio.ObtenerPorCodigo<Comunidad>(1);
+            var loUsuario = loRepositorio.ObtenerPorCodigo<Usuario>(1);
             loUsuario.CambiarDireccionIp("209.165.201.30");
             loRepositorio.GuardarCambios();
             Assert.IsTrue(loUsuario.DireccionIp == "209.165.201.30");
